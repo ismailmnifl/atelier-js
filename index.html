@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>calculatrice</title>
+	</head>
+	<body>
+		<div class="container">
+			<label for="">enter number of input : </label>
+			<input type="text" id="number" />
+			<button id="start">Start</button>
+
+			<div class="work"></div>
+			<div class="results"></div>
+			<button id="numbers">Test</button>
+		</div>
+		<div class="calculator">
+			<div class="resulst"></div>
+			<div class="numbad">
+				<button class="integer int1" onclick="calc('1')">1</button>
+				<button class="integer int2" onclick="calc('2')">2</button>
+				<button class="integer int3" onclick="calc('3')">3</button>
+				<button class="integer int4" onclick="calc('4')">4</button>
+				<button class="integer int5" onclick="calc('5')">5</button>
+				<button class="integer int6" onclick="calc('6')">6</button>
+				<button class="integer int7" onclick="calc('7')">7</button>
+				<button class="integer int8" onclick="calc('8')">8</button>
+				<button class="integer int9" onclick="calc('9')">9</button>
+				<button class="integer int0" onclick="calc('0')">0</button>
+			</div>
+			<div class="operations">
+				<button class="operation opPlus" onclick="calc('+')">+</button>
+				<button class="operation opMinus" onclick="calc('-')">-</button>
+				<button class="operation opMulti" onclick="calc('*')">*</button>
+				<button class="operation opDivis" onclick="calc('/')">/</button>
+			</div>
+			<div class="superoperation"></div>
+			<button id="equal" class="operation equal">=</button>
+			<button class="operation point" onclick="calc('.')">.</button>
+			<button id="opcos" class="operation opcos">cos</button>
+			<button id="optan" class="operation optan">tan</button>
+			<button id="opsin" class="operation opsin">sin</button>
+			<button class="operation oppie" onclick="calc('3.14159')">π</button>
+			<button id="oppuissance" class="operation oppuissance">n²</button>
+			<button id="opclear" class="operation opclear">C</button>
+			<button id="opln" class="operation opln">ln</button>
+			<button id="opabs" class="operation opabs">abs(x)</button>
+			<button id="opE" class="operation opE" onclick="calc('2.718')">
+				e
+			</button>
+			<button id="opexp" class="operation opexp">exp(x)</button>
+			<button id="opsqrt" class="operation opsqrt">sqrt(x)</button>
+		</div>
+	</body>
+	<script>
+		document.getElementById("start").addEventListener("click", numInput);
+		function numInput() {
+			document.getElementById("numbers").style.display = "block";
+
+			var x = document.querySelector("#number").value;
+			for (var i = 0; i <= x; i++) {
+				var content = `<br><label for="">input number : </label><input id="res" type="text"><br><br>`;
+				document.querySelector(".work").innerHTML = content.repeat(i);
+			}
+		}
+		document
+			.getElementById("numbers")
+			.addEventListener("click", printResults);
+
+		function printResults() {
+			var inputs = document.querySelectorAll("#res");
+			var d = inputs.length;
+
+			var a = [];
+
+			for (var i = 0; i < d; i++) {
+				a[i] = inputs[i].value;
+				parseInt(a.value);
+				console.log("element number " + i + " : " + a[i]);
+			}
+			/* console.log("element " + a); */
+			console.log("max element : " + Math.max(...a));
+			console.log("min element : " + Math.min(...a));
+		}
+	</script>
+	<script src="app.js"></script>
+</html>

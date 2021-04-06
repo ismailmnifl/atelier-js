@@ -1,0 +1,141 @@
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#numbers,
+#sort {
+	display: none;
+}
+.container {
+	margin-top: 100px;
+	margin: 20px;
+	background-color: #ddd;
+	border: 1px solid grey;
+	margin: 5px;
+	position: relative;
+	top: 400px;
+}
+
+.calculator {
+	position: relative;
+	right: 100px;
+	border: 1px solid grey;
+	width: 400px;
+	height: auto;
+	background-color: #999;
+	display: flex;
+	flex-wrap: wrap;
+	display: flex;
+}
+.resulst {
+	padding: 6px;
+	width: 100%;
+	height: 80px;
+	background-color: aqua;
+	font-weight: bold;
+	font-size: 30px;
+}
+.integer {
+	width: 100px;
+	height: 100px;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	font-size: 30px;
+	cursor: pointer;
+}
+.numbad {
+	width: 75%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.operations {
+	height: 300px;
+}
+.operation {
+	width: 100px;
+	height: 25%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	font-size: 30px;
+	background-color: lightblue;
+	cursor: pointer;
+}
+.equal {
+	width: 200px;
+	position: relative;
+	left: 200px;
+	bottom: 100px;
+	height: 100px;
+}
+.point {
+	position: relative;
+	right: 200px;
+	bottom: 100px;
+	height: 100px;
+}
+.opcos {
+	position: relative;
+	height: 50px;
+}
+.opsin {
+	position: relative;
+	left: 100px;
+	bottom: 100px;
+	height: 50px;
+}
+.optan {
+	position: relative;
+	left: 100px;
+	bottom: 100px;
+	height: 50px;
+}
+.oppie {
+	position: relative;
+	bottom: 50px;
+	height: 50px;
+}
+.oppuissance {
+	position: relative;
+	bottom: 50px;
+	height: 50px;
+}
+.opclear {
+	position: relative;
+	bottom: 150px;
+	height: 50px;
+}
+.opln {
+	position: relative;
+	bottom: 100px;
+	height: 50px;
+}
+.opabs {
+	position: relative;
+	height: 50px;
+	right: 200px;
+	bottom: 100px;
+}
+.opE {
+	position: relative;
+	height: 50px;
+	bottom: 50px;
+}
+.opexp {
+	position: relative;
+	height: 50px;
+	bottom: 100px;
+	left: 200px;
+}
+.opsqrt {
+	position: relative;
+	height: 50px;
+	bottom: 100px;
+}
